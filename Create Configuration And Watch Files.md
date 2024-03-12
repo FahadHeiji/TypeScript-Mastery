@@ -1,5 +1,3 @@
-Sure, here's a revised explanation based on your provided information:
-
 In TypeScript, you can initialize a new project configuration file named `tsconfig.json` in your project root by running the command `tsc --init`. This file is used to specify the root files and the compiler options required to compile the project.
 
 Here's how you might modify the `tsconfig.json` file:
