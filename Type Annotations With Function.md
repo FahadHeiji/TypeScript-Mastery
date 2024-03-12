@@ -1,27 +1,31 @@
-**Press `ctrl+shift+v` to preview.**
+In TypeScript, you can use type annotations with functions to specify the types of the function's parameters and return value. This is done by appending `: type` after the parameter or function name. For example, in the function `function showDetails(name: string, age: number, salary: number) : string`, `name`, `age`, and `salary` are parameters with types `string`, `number`, and `number` respectively, and the function is expected to return a `string`.
 
----
+Here's how you can use these concepts in the code:
 
-## Link To The Video :
+```typescript
+let showMsg = true;
 
-- [Type Annotations With Function](https://www.youtube.com/watch?v=ibvt_Ala8wE&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=8).
+function showDetails(name: string, age: number, salary: number) : string {
+  let test = 10;
+  if (showMsg) {
+    return `Hello ${name}, Age Is ${age}, Salary Is ${salary}, Test Variable ${test}`;
+  }
+  return `No Data To Show`;
+}
 
-## Notes:
+console.log(showDetails("Osama", 40, 5000));
+```
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+In this code, `showDetails` is a function that takes three parameters: `name` of type `string`, `age` of type `number`, and `salary` of type `number`. It returns a `string`. If you try to pass arguments of a different type or return a value of a different type, TypeScript will throw an error.
 
-  ```git
-  git checkout L8-end
-  ```
+Now, let's discuss the compiler options:
 
-## OR Take Your Own Notes!
+- `noImplicitAny`: This option prevents the use of variables that have not been explicitly typed and would otherwise be implicitly `any`. This helps catch potential errors where the type of a variable might be unclear.
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+- `noImplicitReturns`: This option checks all code paths in a function to ensure they return a value. If there's a path that does not return a value, TypeScript will throw an error.
 
-**While watching:**
+- `noUnusedLocals`: This option reports errors on unused local variables. If you declare a variable but never use it, TypeScript will throw an error.
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
+- `noUnusedParameters`: This option reports errors on unused parameters in functions. If you declare a parameter for a function but never use it in the function body, TypeScript will throw an error.
 
----
+These options help enforce good coding practices and catch potential errors early in the development process. They can be set in the `tsconfig.json` file.
