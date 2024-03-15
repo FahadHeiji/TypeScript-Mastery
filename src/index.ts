@@ -1,4 +1,4 @@
 /*
   Data Types
-  - Advanced Type Alias
+  - Literal Types
 */
