@@ -1,27 +1,37 @@
-**Press `ctrl+shift+v` to preview.**
+Sure, let's discuss Tuples in TypeScript using your provided information.
 
----
+**Tuples in TypeScript**
 
-## Link To The Video :
+A Tuple in TypeScript is a type that allows you to express an array where the type of a fixed number of elements is known, but need not be the same. For example, you might want to represent a value as a pair of a string and a number:
 
-- [Data Types - Tuple](https://www.youtube.com/watch?v=hwTOswoq3BE&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=15).
+```typescript
+// Declare a tuple type
+let x: [string, number];
+```
 
-## Notes:
+In the code, We've defined a tuple `article` that consists of a `number`, a `string`, and a `boolean`.
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+```typescript
+let article: readonly [number, string, boolean] = [11, "Title One", true];
+```
 
-  ```git
-  git checkout L15-end
-  ```
+The `readonly` modifier means that the elements of the tuple cannot be changed once they are assigned. This is why the line `article.push(100);` is commented out - it would result in a TypeScript error.
 
-## OR Take Your Own Notes!
+You can assign a new tuple to the `article` variable, but you can't change the individual elements of the tuple:
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+```typescript
+article = [12, "Title Two", false]; // This is valid
+```
 
-**While watching:**
+You can also use destructuring to assign the elements of the tuple to individual variables:
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
+```typescript
+const [id, title, published] = article;
+console.log(id); // Outputs: 12
+console.log(title); // Outputs: "Title Two"
+console.log(published); // Outputs: false
+```
 
----
+In this code, `id`, `title`, and `published` are constants that hold the values of the elements of the `article` tuple.
+
+In summary, tuples in TypeScript are a way to represent a fixed number of known types in an array. They can be useful when you need to group together values of different types and know exactly how many values you have.
