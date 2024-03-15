@@ -7,20 +7,25 @@
   --- Enum Can Have Functions
 */
 
-const KIDS = 15;
-const EASY = 9;
-const MEDIUM = 6;
-const HARD = 3;
+function getHardSeconds() : number {
+  return 3;
+}
+
+enum Kids {
+  Five = 25,
+  Seven = 20,
+  Ten = 15
+}
 
 enum Level {
-  Kids = 15,
+  Kid = Kids.Ten,
   Easy = 9,
-  Medium = 6,
-  Hard = 3
+  Medium = Easy - 3,
+  Hard = getHardSeconds()
 }
 
 let lvl: string = "Easy";
 
 if (lvl === "Easy") {
-  console.log(`The Level Is ${lvl} And Number Of Seconds Is ${Level.Easy}`);
+  console.log(`The Level Is ${lvl} And Number Of Seconds Is ${Level.Hard}`);
 }
