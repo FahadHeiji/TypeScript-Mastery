@@ -1,27 +1,41 @@
-**Press `ctrl+shift+v` to preview.**
+In TypeScript, a Type Alias can be used to create complex types by combining existing types. This can be done using the `&` operator, which creates an intersection type.
 
----
+In your code, you've defined a type alias `Buttons` that represents an object with four properties: `up`, `right`, `down`, and `left`, all of which are strings.
 
-## Link To The Video :
+```typescript
+type Buttons = {
+  up: string,
+  right: string,
+  down: string,
+  left: string
+}
+```
 
-- [Data Types - Type Alias Advanced](https://www.youtube.com/watch?v=J1WsNERYqYA&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=13).
+Then, you've defined another type alias `Last` that represents an intersection of `Buttons` and an object with a single property `x` of type `boolean`.
 
-## Notes:
+```typescript
+type Last = Buttons & {
+  x: boolean
+}
+```
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+This means that an object of type `Last` must have all the properties of `Buttons` and also the `x` property.
 
-  ```git
-  git checkout L13-end
-  ```
+You've then defined a function `getActions` that takes an argument `btns` of type `Last`. This function logs the values of the `up`, `right`, `down`, and `left` properties of `btns`.
 
-## OR Take Your Own Notes!
+```typescript
+function getActions(btns: Last) {
+  console.log(`Action For Button Up Is ${btns.up}`);
+  console.log(`Action For Button Right Is ${btns.right}`);
+  console.log(`Action For Button Down Is ${btns.down}`);
+  console.log(`Action For Button Left Is ${btns.left}`);
+}
+```
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+Finally, you've called `getActions` with an object that has the properties `up`, `right`, `down`, `left`, and `x`.
 
-**While watching:**
+```typescript
+getActions({ up: "Jump", right: "Go Right", down: "Go Down", left: "Go Left", x: true });
+```
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
-
----
+In summary, Type Alias in TypeScript is a powerful feature that allows you to create complex types by combining existing types. It can make your code more readable and maintainable by providing descriptive names for complex types.
