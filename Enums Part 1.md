@@ -1,27 +1,34 @@
-**Press `ctrl+shift+v` to preview.**
+Sure, let's discuss Enums in TypeScript using your provided information.
 
----
+**Enums** in TypeScript are a special kind of data type that allows us to declare a set of named constants. This can be used for logical grouping of a collection of related values, which helps to organize your code.
 
-## Link To The Video :
+Here's an example from th code:
 
-- [Enums Part 1](https://www.youtube.com/watch?v=Lb8-2rI8nco&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=17).
+```typescript
+enum Level {
+  Kids = 15,
+  Easy = 9,
+  Medium = 6,
+  Hard = 3
+}
+```
 
-## Notes:
+In this code, `Level` is an enum that represents four different levels. Each level is associated with a number.
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+By default, enums are number-based and start at `0` if no initializers are provided. However, in this case, each enum member is initialized with a specific number.
 
-  ```git
-  git checkout L17-end
-  ```
+Enums in TypeScript can be numeric, string-based, or heterogeneous (a mix of strings and numbers). The `Level` enum in the code is a numeric enum because its members are all numbers.
 
-## OR Take Your Own Notes!
+You can use enums in the code like this:
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+```typescript
+let lvl: string = "Easy";
 
-**While watching:**
+if (lvl === "Easy") {
+  console.log(`The Level Is ${lvl} And Number Of Seconds Is ${Level.Easy}`);
+}
+```
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
+In this code, `Level.Easy` is used to get the number associated with the "Easy" level. The output of this code would be: "The Level Is Easy And Number Of Seconds Is 9".
 
----
+In summary, enums in TypeScript are a powerful feature that allows you to define a set of named constants. They can be used to make your code more readable and organized.
