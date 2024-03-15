@@ -4,14 +4,14 @@
 
 ## Link To The Video :
 
-- [Anonymous And Arrow Function](https://www.youtube.com/watch?v=AWg__YvDdvg&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=11).
+- [Data Types - Type Alias](https://www.youtube.com/watch?v=TWTt63RJ3ic&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=12).
 
 ## Notes:
 
 - You Can Check For The Notes And Any other INFO When You Checkout:
 
   ```git
-  git checkout L11-end
+  git checkout L12-end
   ```
 
 ## OR Take Your Own Notes!

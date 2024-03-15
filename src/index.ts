@@ -1,5 +1,4 @@
 /*
-  Function
-  - Anonymous Function
-  - Arrow Function
+  Data Types
+  - Type Alias
 */
