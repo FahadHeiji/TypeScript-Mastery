@@ -4,14 +4,14 @@
 
 ## Link To The Video :
 
-- [Data Types - Type Alias](https://www.youtube.com/watch?v=TWTt63RJ3ic&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=12).
+- [Data Types - Type Alias Advanced](https://www.youtube.com/watch?v=J1WsNERYqYA&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=13).
 
 ## Notes:
 
 - You Can Check For The Notes And Any other INFO When You Checkout:
 
   ```git
-  git checkout L12-end
+  git checkout L13-end
   ```
 
 ## OR Take Your Own Notes!
