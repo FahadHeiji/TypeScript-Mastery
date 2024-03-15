@@ -4,14 +4,14 @@
 
 ## Link To The Video :
 
-- [Data Types - Type Alias Advanced](https://www.youtube.com/watch?v=J1WsNERYqYA&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=13).
+- [Data Types - Tuple](https://www.youtube.com/watch?v=hwTOswoq3BE&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=15).
 
 ## Notes:
 
 - You Can Check For The Notes And Any other INFO When You Checkout:
 
   ```git
-  git checkout L13-end
+  git checkout L15-end
   ```
 
 ## OR Take Your Own Notes!
