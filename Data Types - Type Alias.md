@@ -1,27 +1,30 @@
-**Press `ctrl+shift+v` to preview.**
+**Data Types in TypeScript**
 
----
+TypeScript includes several data types that are similar to those in JavaScript, including `number`, `string`, `boolean`, `null`, `undefined`, `object`, and `symbol`. In addition to these, TypeScript introduces some new types like `any`, `unknown`, `never`, `void`, `enum`, `tuple`, and `array`.
 
-## Link To The Video :
+**Type Alias in TypeScript**
 
-- [Data Types - Type Alias](https://www.youtube.com/watch?v=TWTt63RJ3ic&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=12).
+A Type Alias in TypeScript is a way to provide a new name for a type. It can be used to give a type a more descriptive name, or to simplify complex type annotations. Once defined, a type alias can be used anywhere a type annotation can be used.
 
-## Notes:
+Here's how you can define a type alias:
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+```typescript
+type st = string;
+let theName: st = "Elzero";
+theName = "Osama";
+```
 
-  ```git
-  git checkout L12-end
-  ```
+In this code, `st` is a type alias for the `string` type. You can now use `st` as a type annotation. The variable `theName` is declared with the type `st`, so it can hold string values.
 
-## OR Take Your Own Notes!
+You can also create a type alias for a union type:
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+```typescript
+type standnum = string | number;
+let all: standnum = 10;
+all = 100;
+all = "Osama";
+```
 
-**While watching:**
+In this code, `standnum` is a type alias for the union type `string | number`. The variable `all` is declared with the type `standnum`, so it can hold either string or number values.
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
-
----
+In summary, type aliases in TypeScript are a powerful feature that can make your code more readable and maintainable by providing descriptive names for complex types. They can be used with any type, including primitive types, union types, intersection types, object types, function types, and more.
