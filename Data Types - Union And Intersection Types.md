@@ -1,27 +1,27 @@
-**Press `ctrl+shift+v` to preview.**
+In TypeScript, **Union Types** and **Intersection Types** are powerful ways to combine and work with multiple types.
 
----
+**Union Types** are created using the `|` symbol. A union type is a type formed from two or more other types, representing values that may be any one of those types. Here's an example from the code:
 
-## Link To The Video :
+```typescript
+let all: number | string = 100;
+```
+In this line, `all` can be either a `number` or a `string`.
 
-- [Data Types - Union And Intersection Types](https://www.youtube.com/watch?v=Uf-ODplNJ7A&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=20).
+**Intersection Types** are created using the `&` symbol. An intersection type combines multiple types into one. This means that an object of this type will have all the features of all the component types. Here's an example from the code:
 
-## Notes:
+```typescript
+type A = {
+  one: string,
+  two: number,
+  three: boolean
+}
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+type B = A & {
+  four: number
+}
+```
+In this snippet, `B` is an intersection type that includes all properties of `A` and an additional property `four` of type `number`.
 
-  ```git
-  git checkout L20-end
-  ```
+In the function `getActions`, you're using an intersection type `mix` which is a combination of types `A` and `C`. This means that the parameter `btns` in `getActions` function should have all the properties defined in both `A` and `C`.
 
-## OR Take Your Own Notes!
-
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
-
-**While watching:**
-
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
-
----
+Remember, if a union type is an "OR" (this type or that type), then an intersection type is an "AND" (this type and that type). They are powerful tools in TypeScript that allow for more flexibility and precision in your type definitions.
