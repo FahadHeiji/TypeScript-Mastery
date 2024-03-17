@@ -1,13 +1,12 @@
 /*
   Data Types
-  - Type Assertions
-  --- Sometime Compiler Doesnt Know The Information We Do
-  --- TypeScript Is Not Performing Any Check To Make Sure Type Assertion Is Valid
+  - Union And Intersection Types
+  --- Union Type
+  ------ The | Symbol Is Used To Create The Union => "Or"
+
+  --- Intersection Type
+  ------ Is A Type That Combines Several Types Into One
+  ------ The & Symbol Is Used To Create An Intersection => "And"
+
+  --- If A Union Is An OR, Then An Intersection Is An AND.
 */
-
-// let myImg = document.getElementById("my-img") as HTMLImageElement;
-let myImg = <HTMLImageElement> document.getElementById("my-img");
-console.log(myImg.src);
-
-let data: any = 1000;
-console.log((data as string).repeat(3));
