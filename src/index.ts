@@ -1,5 +1,5 @@
 /*
-    Typescript Assignments Lessons From 1-to-11
+    Typescript Assignments Lessons From 12-to-21
 
     Before You Start Search For:
 
@@ -23,7 +23,6 @@
 
 // Q-01:
 console.groupCollapsed();
-// Edit tsconfig.json File
 
 console.groupEnd();
 
