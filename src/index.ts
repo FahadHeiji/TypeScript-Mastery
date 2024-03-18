@@ -1,28 +1,52 @@
 /*
-  Class
-  - Implement Interface
+    Typescript Assignments Lessons From 22-to-31
+
+    Before You Start Search For:
+
+      - Typescript Interface
+      - Typescript Class Interface Implement
+      - Typescript Class Type Annotations
+      - Typescript Class Inheritance
+      - Typescript Class Extends
+      
+        */
+
+/*
+        اسْتَعِنْ باللَّهِ وَلَا تَعْجِزْ
 */
 
-interface Settings {
-  theme: boolean;
-  font: string;
-  save(): void;
-}
+// Q-01:
+console.groupCollapsed();
 
-class User implements Settings {
-  constructor(public username: string, public theme: boolean, public font: string) {}
-  save(): void {
-    console.log(`Saved`);
-  }
-  update(): void {
-    console.log(`Updated`);
-  }
-}
 
-let userOne = new User("Elzero", true, "Open Sans");
+console.groupEnd();
 
-console.log(userOne.username);
-console.log(userOne.font);
+// Q-02:
+console.groupCollapsed();
 
-userOne.save();
-userOne.update();
+console.groupEnd();
+
+// Q-03:
+console.groupCollapsed();
+
+console.groupEnd();
+
+// Q-04:
+console.groupCollapsed();
+
+console.groupEnd();
+
+// Q-05:
+console.groupCollapsed();
+
+console.groupEnd();
+
+// Q-06:
+console.groupCollapsed();
+
+console.groupEnd();
+
+// Q-07:
+console.groupCollapsed();
+
+console.groupEnd();
