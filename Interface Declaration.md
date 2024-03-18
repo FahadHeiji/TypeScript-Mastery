@@ -1,27 +1,49 @@
-**Press `ctrl+shift+v` to preview.**
+In TypeScript, an **interface** is a way to define a contract on a function with respect to the arguments and their type. Along with functions, an interface can also be used with objects and classes.
 
----
+Here, an interface named `User` is declared:
 
-## Link To The Video :
+```typescript
+interface User {
+  id?: number;
+  readonly username: string;
+  country: string;
+}
+```
 
-- [Interface Declaration](https://www.youtube.com/watch?v=qopmfZ30_TQ&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=22).
+This `User` interface serves like a type that describes the shape of an object. It has three properties: `id`, `username`, and `country`. The `id` property is optional (as denoted by the `?`), meaning it may or may not exist in objects of type `User`. The `username` property is read-only (as denoted by the `readonly` keyword), meaning its value cannot be changed once it is set. The `country` property is a regular, mutable string property.
 
-## Notes:
+Next, an object `user` of type `User` is created:
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+```typescript
+let user: User = {
+  id: 100,
+  username: "Elzero",
+  country: "Egypt",
+};
+```
 
-  ```git
-  git checkout L22-end
-  ```
+The `country` property of the `user` object is then updated:
 
-## OR Take Your Own Notes!
+```typescript
+user.country = "Syria";
+```
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+The `console.log(user);` statement will print the updated `user` object to the console.
 
-**While watching:**
+Finally, a function `getData` is declared which takes an object of type `User` as a parameter and logs the properties of the object:
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
+```typescript
+function getData(data: User) {
+  console.log(`Id Is ${data.id}`);
+  console.log(`Username Is ${data.username}`);
+  console.log(`Country Is ${data.country}`);
+}
+```
 
----
+The `getData` function is then called with a new `User` object:
+
+```typescript
+getData({ id: 200, username: "Osama", country: "KSA" });
+```
+
+This will log the properties of the new `User` object to the console.
