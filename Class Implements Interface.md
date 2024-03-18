@@ -1,27 +1,37 @@
-**Press `ctrl+shift+v` to preview.**
+In TypeScript, a class can implement an interface to ensure that it adheres to a certain structure. This means that the class must contain the properties and methods defined in the interface.
 
----
+Let's take a look at an example:
 
-## Link To The Video :
+```typescript
+interface Settings {
+  theme: boolean;
+  font: string;
+  save(): void;
+}
 
-- [Class Implements Interface](https://www.youtube.com/watch?v=klcmDKP_34s&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=31).
+class User implements Settings {
+  constructor(public username: string, public theme: boolean, public font: string) {}
+  save(): void {
+    console.log(`Saved`);
+  }
+  update(): void {
+    console.log(`Updated`);
+  }
+}
 
-## Notes:
+let userOne = new User("Elzero", true, "Open Sans");
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+console.log(userOne.username); // Outputs: Elzero
+console.log(userOne.font); // Outputs: Open Sans
 
-  ```git
-  git checkout L31-end
-  ```
+userOne.save(); // Outputs: Saved
+userOne.update(); // Outputs: Updated
+```
 
-## OR Take Your Own Notes!
+In this example, we have a `Settings` interface with a `theme` property, a `font` property, and a `save` method. The `User` class implements the `Settings` interface, meaning it must contain a `theme` property, a `font` property, and a `save` method.
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+The `User` class also has an additional `update` method, which is not part of the `Settings` interface. This is allowed because a class can have additional properties and methods beyond those specified in the interface it implements.
 
-**While watching:**
+We then create a `userOne` object using the `new` keyword and the `User` class. We can then use the `username`, `font`, `save`, and `update` properties and methods of this object.
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
-
----
+Class implements an interface in TypeScript It provides a way to ensure that a class adheres to a certain structure, making the code more predictable and easier to work with.
