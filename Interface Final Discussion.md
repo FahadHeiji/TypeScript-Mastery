@@ -1,38 +1,27 @@
-## Interface vs Type Aliases
+**Press `ctrl+shift+v` to preview.**
 
-In TypeScript, both interfaces and type aliases allow you to define custom types. However, there are some differences between them:
+---
 
-- **Interfaces** are more powerful for defining complex object types. They can be reopened to add new properties and can be extended to inherit properties from other interfaces.
-- **Type aliases** are more flexible because they can represent any valid type, not just object types. However, they cannot be reopened or extended like interfaces.
+## Link To The Video :
 
-Here's an example of a type alias:
+- [Class Type Annotations](https://www.youtube.com/watch?v=mD3qHYKNBfo&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=27).
 
-```typescript
-type Settings = {
-  readonly theme: boolean;
-  font: string;
-  sidebar: boolean;
-  external: boolean;
-}
+## Notes:
 
-let userSettings: Settings = {
-  theme: true,
-  font: "Open Sans",
-  sidebar: false,
-  external: true
-}
-```
+- You Can Check For The Notes And Any other INFO When You Checkout:
 
-In this example, `Settings` is a type alias that defines an object type with `theme`, `font`, `sidebar`, and `external` properties.
+  ```git
+  git checkout L27-end
+  ```
 
-## HTMLElement Interface
+## OR Take Your Own Notes!
 
-The `HTMLElement` interface represents any HTML element. It provides properties and methods that you can use to manipulate the appearance and content of the element.
+Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
 
-Here's an example of using the `HTMLElement` interface:
+**While watching:**
 
-```typescript
-let el = document.getElementById("id") as HTMLElement;
-```
+- Stop the video when something important comes up.
+- Write down what you learned in simple words.
+- Ask any questions you have.
 
-In this example, `el` is a variable that holds a reference to an HTML element with the id of `"id"`. The `as HTMLElement` part is a type assertion that tells TypeScript that `el` should be treated as an `HTMLElement`.
+---
