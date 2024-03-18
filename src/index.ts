@@ -1,27 +1,19 @@
 /*
   Interface
-  - ReOpen The Interface And Use Cases
+  - Extending Interfaces
 */
 
-// Homepage
-interface Settings {
-  readonly theme: boolean;
-  font: string;
+interface User {
+  id: number;
+  username: string;
+  country: string;
 }
 
-// Articles Page
-interface Settings {
-  sidebar: boolean;
+
+let user: User = {
+  id: 100,
+  username: "Elzero",
+  country: "Egypt"
 }
 
-// Contact Page
-interface Settings {
-  external: boolean;
-}
-
-let userSettings: Settings = {
-  theme: true,
-  font: "Open Sans",
-  sidebar: false,
-  external: true
-}
+console.log(user.id);
