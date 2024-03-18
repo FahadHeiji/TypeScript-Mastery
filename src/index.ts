@@ -9,11 +9,20 @@ interface User {
   country: string;
 }
 
+interface Moderator {
+  role: string | number;
+}
 
-let user: User = {
+interface Admin extends User,Moderator {
+  protect?: boolean;
+}
+
+let user: Admin = {
   id: 100,
   username: "Elzero",
-  country: "Egypt"
+  country: "Egypt",
+  role: "Mod",
+  protect: true
 }
 
 console.log(user.id);
