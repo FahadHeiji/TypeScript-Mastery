@@ -1,27 +1,38 @@
-**Press `ctrl+shift+v` to preview.**
+## Interface vs Type Aliases
 
----
+In TypeScript, both interfaces and type aliases allow you to define custom types. However, there are some differences between them:
 
-## Link To The Video :
+- **Interfaces** are more powerful for defining complex object types. They can be reopened to add new properties and can be extended to inherit properties from other interfaces.
+- **Type aliases** are more flexible because they can represent any valid type, not just object types. However, they cannot be reopened or extended like interfaces.
 
-- [Interface Final Discussion](https://www.youtube.com/watch?v=CaBIiFpxFTo&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=26).
+Here's an example of a type alias:
 
-## Notes:
+```typescript
+type Settings = {
+  readonly theme: boolean;
+  font: string;
+  sidebar: boolean;
+  external: boolean;
+}
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+let userSettings: Settings = {
+  theme: true,
+  font: "Open Sans",
+  sidebar: false,
+  external: true
+}
+```
 
-  ```git
-  git checkout L26-end
-  ```
+In this example, `Settings` is a type alias that defines an object type with `theme`, `font`, `sidebar`, and `external` properties.
 
-## OR Take Your Own Notes!
+## HTMLElement Interface
 
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
+The `HTMLElement` interface represents any HTML element. It provides properties and methods that you can use to manipulate the appearance and content of the element.
 
-**While watching:**
+Here's an example of using the `HTMLElement` interface:
 
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
+```typescript
+let el = document.getElementById("id") as HTMLElement;
+```
 
----
+In this example, `el` is a variable that holds a reference to an HTML element with the id of `"id"`. The `as HTMLElement` part is a type assertion that tells TypeScript that `el` should be treated as an `HTMLElement`.
