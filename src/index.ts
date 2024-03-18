@@ -1,28 +1,28 @@
 /*
   Interface
-  - Extending Interfaces
+  - Interface vs Type Aliases
+  - Take A Look On HTMLElement Interface
 */
 
-interface User {
-  id: number;
-  username: string;
-  country: string;
+// Homepage
+interface Settings {
+  readonly theme: boolean;
+  font: string;
 }
 
-interface Moderator {
-  role: string | number;
+// Articles Page
+interface Settings {
+  sidebar: boolean;
 }
 
-interface Admin extends User,Moderator {
-  protect?: boolean;
+// Contact Page
+interface Settings {
+  external: boolean;
 }
 
-let user: Admin = {
-  id: 100,
-  username: "Elzero",
-  country: "Egypt",
-  role: "Mod",
-  protect: true
+let userSettings: Settings = {
+  theme: true,
+  font: "Open Sans",
+  sidebar: false,
+  external: true
 }
-
-console.log(user.id);
