@@ -1,27 +1,28 @@
-**Press `ctrl+shift+v` to preview.**
+In TypeScript, **generics** can also be used with classes. This allows you to create classes that can work with a variety of types rather than a single one.
 
----
+In this code, `User` is a generic class that can work with any type `T`. By default, `T` is `string` if no type is provided when creating an instance of the class.
 
-## Link To The Video :
+```typescript
+class User<T = string> {
+  constructor(public value: T) {}
+  show(msg: T) : void {
+    console.log(`${msg} - ${this.value}`);
+  }
+}
+```
 
-- [Generics Classes](https://www.youtube.com/watch?v=Mj6TJAoisxw&list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ&index=36).
+The `User` class has a constructor that takes a value of type `T` and a method `show` that takes a message of type `T`. The `show` method logs a string that includes the message and the value.
 
-## Notes:
+You can create instances of the `User` class with different types. For example, `userOne` is an instance of `User` with type `string`, and `userTwo` is an instance of `User` with type `number | string` (which means the type can be either `number` or `string`).
 
-- You Can Check For The Notes And Any other INFO When You Checkout:
+```typescript
+let userOne = new User<string>("Elzero");
+console.log(userOne.value);
+userOne.show("Message");
 
-  ```git
-  git checkout L36-end
-  ```
+let userTwo = new User<number | string>(100);
+console.log(userTwo.value);
+userTwo.show("Message");
+```
 
-## OR Take Your Own Notes!
-
-Create a markdown file (e.g., notes.md) to capture your key takeaways while watching:
-
-**While watching:**
-
-- Stop the video when something important comes up.
-- Write down what you learned in simple words.
-- Ask any questions you have.
-
----
+This is a powerful feature of generics in TypeScript. It allows you to write flexible and reusable code that can handle a variety of different types of data.
